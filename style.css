@@ -1,1 +1,78 @@
+#bannerTitle {
+    color: darkolivegreen;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgray;
+}
+
+header {
+    padding: 20px;
+    background-color: darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 0;
+    flex: 1;
+}
+
+#search-form {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 5px;
+    width: 200px;
+}
+
+#load-more-movies-btn,
+#close-search-btn {
+    margin-left: 10px;
+}
+
+/* the parent container that holds the movie card elements but does not dictate or affect their individual styling */
+/* hold and organize the movie card elements*/
+#movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+/* does not explicitly refer ti the movie-grid */
+/* the styling rules here will apply to any element with the class movie-card regardless of where located in the HTML structure */
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.movie-card .movie-poster {
+   width: 100%;
+   height: auto;
+   margin-bottom: 10px;
+}
+
+.movie-card .movie-title {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: darkolivegreen;
+    text-align: center;
+}
+
+.movie-card .movie-votes {
+    font-style: italic;
+    font-weight: 600;
+}
